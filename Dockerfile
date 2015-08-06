@@ -39,6 +39,8 @@ ADD ${ID1} /home/root/id1
 ADD ffa /home/root/ffa
 ADD start-ffa ./
 
+EXPOSE 27510
+
 CMD ./start-ffa
 
 
