@@ -22,12 +22,6 @@ RUN yes | pacman -Su
 # Fix possibly incorrect pacman db format after world upgrade
 RUN pacman-db-upgrade
 
-# # Remove orphaned packages
-# ADD helpers/remove_orphaned_packages.sh /tmp/
-# RUN chmod +x /tmp/remove_orphaned_packages.sh \
-#   && /tmp/remove_orphaned_packages.sh \
-#   && rm -f /tmp/remove_orphaned_packages.sh
-
 # Clear pacman caches
 RUN yes | pacman -Scc
 
@@ -44,5 +38,7 @@ RUN cp mvdsv-server/build/make/mvdsv .
 ADD ${ID1} /home/root/id1
 ADD ffa /home/root/ffa
 ADD start-ffa ./
+
+CMD ./start-ffa
 
 
