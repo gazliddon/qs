@@ -1,0 +1,2 @@
+echo RUNNING KTX PUBLIC SERVER ON PORT 27510
+./mvdsv -port 27510 -game ffa +map dm2
